@@ -1,0 +1,18 @@
+{
+    "sourceFile": "TratamentoDeDados.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698090102484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698090102484,
+            "name": "Commit-0",
+            "content": "import pandas as pd \r\nimport seaborn as srn\r\nimport statistics as sts \r\n#importar dados\r\ndataset = pd.read_csv(\"C:\\CIENCIAS_DE_DADOS\\DADOS\\DADOS_TESTE\\Churn.csv\", sep=\";\") \r\n#visualizar\r\ndataset.head()\r\n#tamanho dos corpos dos dados\r\ndataset.shape\r\n#Escreve os nomes da coluna de acordo do conhecimento do dado\r\ndataset.columns = [\"Id\",\"Score\",\"Estado\",\"Genero\",\"Idade\",\"Patrimonio\",\"Saldo\",\"Produtos\",\"TemCartCredito\",\r\n                    \"Ativo\",\"Salario\",\"Saiu\" ]\r\ndataset.head()\r\nagrupado = dataset.groupby(['Salario']).size()\r\nagrupado\r\nagrupado.plot.bar(color = 'blue')\r\nagrupado = dataset.groupby(['Salario']).size()\r\nagrupado\r\nagrupado.plot.bar(color = 'red')\r\n#explorar colunas númericas\r\ndataset['Quantidade Distinta de Produtos'].describe()\r\nsrn.boxplot(dataset['Salario']).set_title('teste')\r\nsrn.displot(dataset['Salario'])\r\ndataset.isnull().sum()\r\n#verifica a mediana \r\nmedian = sts.median(dataset['Salario'])\r\nmedian\r\n#Substituir NAN por Mediana\r\ndataset['Salario'].fillna(median, inplace=True)"
+        }
+    ]
+}
