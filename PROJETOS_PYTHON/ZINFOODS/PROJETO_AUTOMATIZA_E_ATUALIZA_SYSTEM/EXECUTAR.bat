@@ -1,0 +1,1 @@
+start C:\PROJETO_AUTOMATIZA_E_ATUALIZA_SYSTEM\AtualizarSystem.py
